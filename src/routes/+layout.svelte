@@ -75,10 +75,10 @@
 		font-size:20px;
 	}
 	:global(a) {
-		color: #6699CC;
+		color: #dd5500;
 	}
 	:global(a:visited) {
-		color: #CC99CC;
+		color: #991100;
 	}
 	:global(h1){
         font-size:900%;

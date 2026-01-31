@@ -4,10 +4,16 @@
     let { data } = $props();
 </script>
 
+<svelte:head><title>{data.post?.title}</title></svelte:head>
+
 <main>
     <h3>{data.post?.slug}</h3>
     {@html marked(Object.values(data.post?.content as Object)[0] as string)}
 </main>
+
+<p>want me in your inbox? <a href="https://buttondown.com/mote">subscribe to my newsletter!</a> if you'd rather an rss feed, you can <a href="https://kill-the-newsletter.com/">kill my newsletter</a></p>
+
+<div style="height:100px"></div>
 
 <style>
     main{
@@ -42,7 +48,7 @@
         display:block;
         margin:auto;
     }
-    @media (width < 600px){
+    @media (width < 1200px){
         :global(h1){
             font-size:500%;
         }

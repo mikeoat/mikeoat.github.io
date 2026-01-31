@@ -5,6 +5,8 @@
     const sortedProjects = projects.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 </script>
 
+<svelte:head><title>mike's things</title></svelte:head>
+
 <h1>projects</h1>
 <main>
     {#each sortedProjects as project}
@@ -116,9 +118,9 @@
         cursor:pointer;
     }
     .see-project h2, svg {
-        color: #6699CC;
+        color: #dd5500;
     }
-    @media (width < 600px){
+    @media (width < 950px){
         button{
             width: 100%;
         }

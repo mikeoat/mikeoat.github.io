@@ -1,7 +1,7 @@
 <script lang="ts">
     import { people } from "./data";
 
-    const allimgs = [
+    const buttons = [
         //buttons
         {path:"/img/alliens.gif",alt:"",link:"https://alliens.net/"},
         {path:"/img/antinazi.gif",alt:"",link:""},
@@ -16,14 +16,19 @@
         {path:"/img/web.gif",alt:"",link:""},
         {path:"/img/roly-saynotoweb3.gif",alt:"",link:"https://yesterweb.org/no-to-web3/"},
         {path:"/img/sucks2.gif",alt:"",link:""},
+    ];
+    const large_images = [
         //larger images
         {path:"/img/kirby-headphones.gif",alt:"",link:""},
         {path:"/img/water.gif",alt:"",link:""},
         {path:"/img/spongebob_flag_twirlers_stamp_by_cassiecros.gif",alt:"",link:""},
         {path:"/img/shr.gif",alt:"",link:""},
         {path:"/img/pear.gif",alt:"",link:"https://www.youtube.com/watch?v=dQw4w9WgXcQ"},
+        {path:"/img/dog_digging.webp",alt:"",link:""}
     ];
 </script>
+
+<svelte:head><title>about mike</title></svelte:head>
 
 <h1>about</h1>
 <main>
@@ -37,10 +42,41 @@
         outside of audio, i also do some web development. information about some of the projects i've worked on can be found on my <a href="projects">projects page</a>.
         </p>
     </div>
+    <h2>contact me</h2>
+    <div class="contact">
+        <button onclick={() => window.location.href="mailto:micgmcd@proton.me"}>
+            <p style="display:inline;"><u>email</u></p>
+            <p>micgmcd@proton.me</p>
+        </button>
+        <button onclick={() => window.location.href="mailto:https://signal.me/#eu/HkBXrvXqY-0CFrySs1r_xS0V0SeRqSrrj__r4MTQNAKopdIESOdNCJkkYFzRt66h"}>
+            <p><u>signal (preferred)</u></p>
+            <p>mikeoat.23</p>
+        </button>
+        <button onclick={() => window.location.href="https://discord.com/users/398496693135343636"}>
+            <p><u>discord</u></p>
+            <p>mikeoat</p>
+        </button>
+        <button onclick={() => window.location.href="https://www.instagram.com/mikgmcd/"}>
+            <p><u>instagram</u></p>
+            <p>mikgmcd</p>
+        </button>
+    </div>
+
     <h2>status</h2>
-    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=mikeoat" defer></script>
-    
+        <div style="display:flex; flex-direction:column; align-items:center;">
+            <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=mikeoat" defer></script>
+            <hr style="width:70%">
+            <section style="width:100%; display:flex; flex-direction:column; align-items:center; color:white; font-family:'Courier New', Courier, monospace;">
+                <!-- © wdisseny --><div id="contain_moon" style="display:flex; flex-direction:column; align-items:center;;width:fit-content;text-align:center;padding-top:5px;padding-bottom:5px;font-size:18px"><div style="font-weight:bold">Moon phase</div><div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 30px hsl(220,100%,15%))"></div><div>.</div><div style="font-size:small">.</div></div><script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="next full moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
+            </section>
+            <hr style="width:70%">
+            <section>
+                <p style="display:inline-block;">feeling:</p><a style="display:inline-block;" href="https://www.imood.com/users/mikeoat"><img src="https://moods.imood.com/display/uname-mikeoat/fg-FFFFFF/trans-1/imood.gif" alt="The current mood of mikeoat at www.imood.com"></a>
+            </section>
+        </div>
+
     <h2>cool people</h2>
+    <iframe width="180" height="180" style="border:none; margin-bottom:10px;" src="https://dimden.neocities.org/navlink/" title="neolink"></iframe>
     <div style="display:flex; flex-flow: row wrap; justify-content:center;">
         {#each people as person}
             <button onclick={() => window.location.href=person.link}>
@@ -63,7 +99,7 @@
 
     <h2>buttons and gifs i like</h2>
     <div style="display:flex; flex-flow: row wrap; justify-content:center; align-items:baseline;">
-        {#each allimgs as img}
+        {#each buttons as img}
         {#if img.link != ""}
             <a href="{img.link}"><img style="max-height:100px; padding:5px;" src="{img.path}" alt="{img.alt}"/></a>
         {:else}
@@ -71,6 +107,16 @@
         {/if}
         {/each}
     </div>
+    <div style="display:flex; flex-flow: row wrap; justify-content:center; align-items:baseline;">
+        {#each large_images as img}
+        {#if img.link != ""}
+            <a href="{img.link}"><img style="max-height:100px; padding:5px;" src="{img.path}" alt="{img.alt}"/></a>
+        {:else}
+            <img style="max-height:150px; padding:5px;" src="{img.path}" alt="{img.alt}"/>
+        {/if}
+        {/each}
+    </div>
+
     <div style="height:100px; border:none;"></div>
 </main>
 
@@ -97,11 +143,24 @@
         flex-direction:column;
     }
     a:visited{
-        color: #6699CC;
+        color: #771100;
+    }
+    .contact{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        text-align:center;
+    }
+    .contact p{
+        text-align:center;
     }
     #statuscafe {
         font-family:'Courier New', Courier, monospace;
         background-color: transparent;
+        border:none;
+        display:flex; 
+        flex-direction:column; 
+        align-items:center;
     }
     #statuscafe-username {
         font-size:large;
@@ -115,6 +174,9 @@
         border:none;
         color:white;
         margin:.5em;
+    }
+    section div{
+        border:none;
     }
     button{
         background:#111111;

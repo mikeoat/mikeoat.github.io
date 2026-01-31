@@ -35,7 +35,7 @@
 	<div class="info">
 		<div class="description">
 			<!-- svelte-ignore a11y_distracting_elements -->
-			<marquee direction="right" behavior="alternate" style="z-index:0; font-size: 50px; font-weight:bold; color: #6699CC; margin-bottom:8px; text-align:left">{title}</marquee>
+			<marquee direction="right" behavior="alternate" style="z-index:0; font-size: 50px; font-weight:bold; color: #dd5500; margin-bottom:8px; text-align:left">{title}</marquee>
 		</div>
 
 		<div class="time">
@@ -78,7 +78,7 @@
 		display: grid;
         font-family:monospace;
         font-size:large;
-        color: #6699CC;
+        color: #dd5500;
 		grid-template-columns: 2.5em 1fr;
 		align-items: center;
 		gap: 1em;
@@ -92,7 +92,7 @@
 	.player:not(.paused) {
         font-family:monospace;
         font-size:large;
-		color: #6699CC;
+		color: #dd5500;
 		filter: drop-shadow(0.5em 0.5em 1em rgba(0,0,0,0.1));
 	}
 
@@ -101,7 +101,7 @@
 		aspect-ratio: 1;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
-        background-color:#6699CC;
+        background-color:#dd5500;
 		border-radius: 50%;
         border:none;
 	}
@@ -147,7 +147,7 @@
 	.progress {
 		width: calc(100 * var(--progress));
 		height: 100%;
-		background-color:#6699CC;
+		background-color:#dd5500;
 	}
 
 	.play:hover{

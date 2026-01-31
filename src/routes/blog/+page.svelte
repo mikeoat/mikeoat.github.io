@@ -1,10 +1,23 @@
 <script lang="ts">
     let { data } = $props();
+
+    let innerHeight = $state(0);
+    let innerWidth = $state(0);
 </script>
 
-<h1>blog</h1>
+<svelte:head><title>M.O.T.E.</title></svelte:head>
+<svelte:window bind:innerHeight bind:innerWidth></svelte:window>
+
+<h1><u>m</u>ike's <u>o</u>nline <u>t</u>hought <u>e</u>xpulsion</h1>
+
+<p style="text-align:center;">would you rather read this in your inbox? <br><a href="https://buttondown.com/mote">subscribe to my newsletter!</a></p>
 
 <main>
+    {#if innerWidth > 1080}
+        <iframe width="150" height="450" style="border:none" src="https://dogspit.nekoweb.org/sidelink.html" title="sidelink"></iframe>
+    {:else}
+        <iframe width="180" height="180" style="border:none; margin-bottom:10px;" src="https://dimden.neocities.org/navlink/" title="neolink"></iframe>
+    {/if}
     <section>
         {#each data.summaries as { slug, title, content }}
         <a href="blog/{slug}">
@@ -16,16 +29,23 @@
         </a>
         {/each}
     </section>
+    {#if innerWidth > 1080}
+    <iframe width="150" height="450" style="border:none" src="https://dogspit.nekoweb.org/sidelink.html" title="sidelink"></iframe>
+    {:else}
+        <iframe width="180" height="180" style="border:none; margin-bottom:10px;" src="https://dimden.neocities.org/navlink/" title="neolink"></iframe>
+    {/if}
 </main>
 
 <style>
     main{
         display:flex;
-        flex-direction:column;
+        flex-direction:row;
+        align-items:center;
         justify-items: center;
         margin-bottom:72px;
     }
     section{
+        width:fit-content;
         display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(250px, 270px));
 		gap: 20px;
@@ -66,5 +86,10 @@
     }
     p,h3{
         margin:8px;
+    }
+    @media (width < 1080px){
+        main{
+            flex-direction:column;
+        }
     }
 </style>

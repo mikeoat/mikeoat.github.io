@@ -10,6 +10,8 @@
     const postsTrunc = posts.slice(0,3);
 </script>
 
+<svelte:head><title>m.o.t.e.</title></svelte:head>
+
 <main>
 <img style="max-width:100px; margin-bottom:10px;" src="{favicon}" alt="mike's logo">
 <h1 style="position:absolute;"><u>m</u>ike's <u>o</u>nline <u>t</u>hing <u>e</u>xhibition</h1>
@@ -64,6 +66,7 @@
 
 
 <h2>recent blog posts</h2>
+<p><a href="https://buttondown.com/mote">click for newsletter.</a></p>
 <div style="display:flex; flex-direction:column; justify-content:space-between;">
     {#each postsTrunc as post}
         <a href="blog/{post.slug}">
@@ -149,9 +152,9 @@
         cursor:pointer;
     }
     .see-project h2, svg {
-        color: #6699CC;
+        color: #dd5500;
     }
-    @media (width < 600px){
+    @media (width < 1000px){
         button{
             width: 100%;
         }

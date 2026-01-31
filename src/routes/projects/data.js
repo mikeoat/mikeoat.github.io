@@ -79,7 +79,7 @@ export const projects = [
     {
         src:"https://raw.githubusercontent.com/mikeoat/music-portfolio/main/heart.flac",
         title: "Repreive",
-        blurb: "<i>Reprieve</i> is an dramatic 'IDM' piece with algorithmically composed drums and a chord pattern based on the hirajōshi scale. the overall composition of the piece evokes wistfulness, with soaring leads and a solid harmonic backdrop, held together by a marching glitchy groove.",
+        blurb: "<i>Reprieve</i> is a dramatic 'IDM' piece with algorithmically composed drums and a chord pattern based on the hirajōshi scale. the overall composition of the piece evokes wistfulness, with soaring leads and a solid harmonic backdrop, held together by a marching glitchy groove.",
         tags: ["music"],
         date: "09-02-2021"
     },
