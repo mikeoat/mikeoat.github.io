@@ -5,7 +5,7 @@
         //buttons
         {path:"/img/alliens.gif",alt:"",link:"https://alliens.net/"},
         {path:"/img/antinazi.gif",alt:"",link:""},
-        {path:"/img/bestview.gif",alt:"",link:""},
+        {path:"/img/bestview.gif",alt:"",link:"https://en.wikipedia.org/wiki/Human_eye"},
         {path:"/img/bitwarden.gif",alt:"",link:"https://bitwarden.com/"},
         {path:"/img/bufreepalestine.gif",alt:"",link:""},
         {path:"/img/chrmevil.gif",alt:"",link:""},
@@ -16,6 +16,7 @@
         {path:"/img/web.gif",alt:"",link:""},
         {path:"/img/roly-saynotoweb3.gif",alt:"",link:"https://yesterweb.org/no-to-web3/"},
         {path:"/img/sucks2.gif",alt:"",link:""},
+        {path: "https://zonaplankton.net/buttons/zonabutton.gif", alt:"", link:"https://zonaplankton.net"},
     ];
     const large_images = [
         //larger images
@@ -24,7 +25,9 @@
         {path:"/img/spongebob_flag_twirlers_stamp_by_cassiecros.gif",alt:"",link:""},
         {path:"/img/shr.gif",alt:"",link:""},
         {path:"/img/pear.gif",alt:"",link:"https://www.youtube.com/watch?v=dQw4w9WgXcQ"},
-        {path:"/img/dog_digging.webp",alt:"",link:""}
+        {path:"/img/dog_digging.webp",alt:"",link:""},
+        {path: "https://publictransit.neocities.org/souv/stamps/map.gif", alt:"", link:"https://publictransit.neocities.org/"},
+        {path: "https://zonaplankton.net/art-gallery/ge-artbook.png", alt:"", link:"https://zonaplankton.net/"}
     ];
 </script>
 
@@ -66,13 +69,20 @@
         <div style="display:flex; flex-direction:column; align-items:center;">
             <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=mikeoat" defer></script>
             <hr style="width:70%">
-            <section style="width:100%; display:flex; flex-direction:column; align-items:center; color:white; font-family:'Courier New', Courier, monospace;">
-                <!-- © wdisseny --><div id="contain_moon" style="display:flex; flex-direction:column; align-items:center;;width:fit-content;text-align:center;padding-top:5px;padding-bottom:5px;font-size:18px"><div style="font-weight:bold">Moon phase</div><div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 30px hsl(220,100%,15%))"></div><div>.</div><div style="font-size:small">.</div></div><script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="next full moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
-            </section>
-            <hr style="width:70%">
             <section>
                 <p style="display:inline-block;">feeling:</p><a style="display:inline-block;" href="https://www.imood.com/users/mikeoat"><img src="https://moods.imood.com/display/uname-mikeoat/fg-FFFFFF/trans-1/imood.gif" alt="The current mood of mikeoat at www.imood.com"></a>
             </section>
+            <hr style="width:70%">
+            <section style="width:100%; display:flex; flex-direction:column; align-items:center; color:white; font-family:'Courier New', Courier, monospace;">
+                <!-- © wdisseny --><div id="contain_moon" style="display:flex; flex-direction:column; align-items:center;;width:fit-content;text-align:center;padding-top:5px;padding-bottom:5px;font-size:18px"><div style="font-weight:bold">Moon phase</div><div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 30px hsl(220,100%,15%))"></div><div>.</div><div style="font-size:small">.</div></div><script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="next full moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
+            </section>
+            <!-- wait for more tests
+            <hr style="width:70%">
+            <h3>tests</h3>
+            <a href="http://www.nerdtests.com/ft_loser.php?im">
+                <img src="http://www.nerdtests.com/images/ft/lsr.php?val=9694" alt="I am 66% loser. What about you? Click here to find out!">
+            </a>
+            -->
         </div>
 
     <h2>cool people</h2>
@@ -99,6 +109,7 @@
 
     <h2>buttons and gifs i like</h2>
     <div style="display:flex; flex-flow: row wrap; justify-content:center; align-items:baseline;">
+        <iframe width=88px height=31px title="number go up" src="//incr.easrng.net/badge?key=motemikedotcom" style="margin:10px; background: url(//incr.easrng.net/bg.gif)"></iframe>
         {#each buttons as img}
         {#if img.link != ""}
             <a href="{img.link}"><img style="max-height:100px; padding:5px;" src="{img.path}" alt="{img.alt}"/></a>
@@ -115,6 +126,16 @@
             <img style="max-height:150px; padding:5px;" src="{img.path}" alt="{img.alt}"/>
         {/if}
         {/each}
+    </div>
+
+    <h2>library</h2>
+    <div style="display:flex; flex-flow: row wrap; justify-content:center; align-items:baseline;">
+        <p><a href="https://s.ai/nlws/">Unker Non-Linear Writing System</a> - helped develop my understanding of what language actually <strong>is</strong>. has been useful in my language learning journey for that reason</p>
+        <p><a href="https://slatestarcodex.com/2020/06/01/book-review-origin-of-consciousness-in-the-breakdown-of-the-bicameral-mind/">Book Review: Origin Of Consciousness In The Breakdown Of The Bicameral Mind</a> - sparked my interest in consciousness and theory of mind, also got me into slate star codex, though i dont read scott's work as much as i used to</p>
+        <p><a href="https://meltingasphalt.com/music-in-human-evolution/">music in human evolution</a> - very formative for my perspective on music and what it means for humans</p>
+        <p><a href="https://www.soundonsound.com/techniques/synthesizing-brass-instruments">Synthesizing Brass Instruments</a> - more symbolically important to me than what is included in the article; representative of the start of my love for DSP</p>
+        <p><a href="https://slimemoldtimemold.com/2021/07/13/a-chemical-hunger-part-iii-environmental-contaminants/">A Chemical Hunger Part III: Environmental Contaminants</a> - a great overview of the obesity epidemic that isnt bogged down by pseudoscience (something unfortunately rare to see when researching things regarding health and fitness)</p>
+        <p><a href="https://libre.town/thoughts/entry_9.xhtml">The Hypertext Maximalist's Manifesto</a> - rationalizes my reasons for putting links everywhere, whenever possible (i started doing it because i'm used to using <a href="https://obsidian.md/">obsidian</a>)</p>
     </div>
 
     <div style="height:100px; border:none;"></div>

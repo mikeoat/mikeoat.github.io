@@ -11,6 +11,7 @@
 <h1><u>m</u>ike's <u>o</u>nline <u>t</u>hought <u>e</u>xpulsion</h1>
 
 <p style="text-align:center;">would you rather read this in your inbox? <br><a href="https://buttondown.com/mote">subscribe to my newsletter!</a></p>
+<iframe width=88px height=31px title="number go up" src="//incr.easrng.net/badge?key=motemikedotcom" style="display:block; margin:10px auto; background: url(//incr.easrng.net/bg.gif)"></iframe>
 
 <main>
     {#if innerWidth > 1080}
