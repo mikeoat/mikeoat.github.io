@@ -80,6 +80,7 @@
         </a>
     {/each}
 </div>
+<h2>webrings</h2>
 <!-- CDRING START -->
 <div id='cdr'>
     <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
