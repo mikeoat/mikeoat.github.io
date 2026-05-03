@@ -10,7 +10,10 @@
     const postsTrunc = posts.slice(0,3);
 </script>
 
-<svelte:head><title>m.o.t.e.</title></svelte:head>
+<svelte:head>
+    <title>m.o.t.e.</title>
+    <link rel="stylesheet" href="https://cdring.neocities.org/cdring/onionring.css">
+</svelte:head>
 
 <main>
 <img style="max-width:100px; margin-bottom:10px;" src="{favicon}" alt="mike's logo">
@@ -77,6 +80,12 @@
         </a>
     {/each}
 </div>
+<!-- CDRING START -->
+<div id='cdr'>
+    <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
+    <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-widget.js"></script>
+</div>
+<!-- CDRING END --> 
 </main>
 <div style="height:100px"></div>
 
