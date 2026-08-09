@@ -7,17 +7,12 @@ export const people = [
     {
         name: "lilith",
         link: "https://lilithmode.neocities.org/",
-        notes: ["musician", "producer", "nerd", "programmer"]
+        notes: ["musician", "producer", "nerd", "programmer", "we go way back"]
     },
     {
         name: "Smilley",
         link: "https://smilleyhasawebsite.com/",
         notes: ["musician", "producer", "we go way back"]
-    },
-    {
-        name: "jacob",
-        link: "https://linktr.ee/jacobdurbin?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
-        notes: ["musician", "producer", "influencer"]
     },
     {
         name: "wolfie",

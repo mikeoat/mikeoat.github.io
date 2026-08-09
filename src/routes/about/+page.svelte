@@ -31,7 +31,10 @@
     ];
 </script>
 
-<svelte:head><title>about mike</title></svelte:head>
+<svelte:head>
+    <title>about mike</title>
+<link rel="stylesheet" href="https://cdring.neocities.org/cdring/onionring.css">
+</svelte:head>
 
 <h1>about</h1>
 <main>
@@ -136,6 +139,15 @@
         <p><a href="https://www.soundonsound.com/techniques/synthesizing-brass-instruments">Synthesizing Brass Instruments</a> - more symbolically important to me than what is included in the article; representative of the start of my love for DSP</p>
         <p><a href="https://slimemoldtimemold.com/2021/07/13/a-chemical-hunger-part-iii-environmental-contaminants/">A Chemical Hunger Part III: Environmental Contaminants</a> - a great overview of the obesity epidemic that isnt bogged down by pseudoscience (something unfortunately rare to see when researching things regarding health and fitness)</p>
         <p><a href="https://libre.town/thoughts/entry_9.xhtml">The Hypertext Maximalist's Manifesto</a> - rationalizes my reasons for putting links everywhere, whenever possible (i started doing it because i'm used to using <a href="https://obsidian.md/">obsidian</a>)</p>
+    </div>
+    <h2>webrings</h2>
+    <div>
+<!-- CDRING START -->
+<div style="border:none;" id='cdr'>
+<script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
+<script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-widget.js"></script>
+    </div>
+<!-- CDRING END --> 
     </div>
 
     <div style="height:100px; border:none;"></div>
