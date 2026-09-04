@@ -98,8 +98,7 @@ export class SvelteMap extends Map {
 		var s = sources.get(key);
 
 		if (s === undefined) {
-			var ret = super.get(key);
-			if (ret !== undefined) {
+			if (super.has(key)) {
 				s = this.#source(0);
 
 				if (DEV) {
@@ -134,8 +133,7 @@ export class SvelteMap extends Map {
 		var s = sources.get(key);
 
 		if (s === undefined) {
-			var ret = super.get(key);
-			if (ret !== undefined) {
+			if (super.has(key)) {
 				s = this.#source(0);
 
 				if (DEV) {
@@ -153,6 +151,28 @@ export class SvelteMap extends Map {
 
 		get(s);
 		return super.get(key);
+	}
+
+	/**
+	 * @param {K} key
+	 * @param {V} value
+	 * */
+	getOrInsert(key, value) {
+		if (!super.has(key)) {
+			this.set(key, value);
+		}
+		return /** @type {V} */ (this.get(key));
+	}
+
+	/**
+	 * @param {K} key
+	 * @param {(key: K) => V} callbackFn
+	 */
+	getOrInsertComputed(key, callbackFn) {
+		if (!super.has(key)) {
+			this.set(key, callbackFn(key));
+		}
+		return /** @type {V} */ (this.get(key));
 	}
 
 	/**
@@ -202,8 +222,11 @@ export class SvelteMap extends Map {
 
 		if (s !== undefined) {
 			sources.delete(key);
-			set(this.#size, super.size);
 			set(s, -1);
+		}
+
+		if (res) {
+			set(this.#size, super.size);
 			increment(this.#version);
 		}
 

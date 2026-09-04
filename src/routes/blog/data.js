@@ -3,6 +3,11 @@ const values = Object.values(blog_posts);
 
 export const posts = [
     {
+	slug: "08-28-2026",
+	title: "humanity online",
+	content: values[14]
+    },
+    {
         slug: "08-03-2026",
         title: 'living a life of passion',
         content: values[13]
