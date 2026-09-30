@@ -13,26 +13,32 @@
     let container: HTMLButtonElement[] = [];
 
 	let navItems = [
-		{url:"/",text:"home"},
-		{url:"/about",text:"about"},
-		{url:"/projects",text:"projects"},
-		{url:"/blog",text:"blog"},
+		{url:"/",text:"home",type:"internal"},
+		{url:"/about",text:"about",type:"internal"},
+		{url:"/projects",text:"projects",type:"internal"},
+		{url:"/blog",text:"blog",type:"internal"},
+		{url:"https://store.mote.moe/",text:"store",type:"external"}
 	];
 
 	function assignElementsToArray(discreteElement: HTMLButtonElement, index: number) {
 		container[index] = discreteElement;
 	}
     
-	function moveRectangle(index: number, navItem: {url: string, text: string}) {
+	function moveRectangle(index: number, navItem: {url: string, text: string, type: string}) {
 		selectedSize.target = container[index].getBoundingClientRect().width;
 		selectedPosition.target = container[index].getBoundingClientRect().left;
-		goto(navItem.url);
+		if (navItem.type == "internal") {
+			goto(navItem.url);
+		} else {
+			window.location.href = navItem.url;
+		}
 	}
 
     onMount(() => {
         switch (window.location.pathname){
             case '/':
                 moveRectangle(0, navItems[0]);
+				
                 break;
             case '/about':
                 moveRectangle(1, navItems[1]);
