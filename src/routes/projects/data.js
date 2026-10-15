@@ -1,5 +1,12 @@
 export const projects = [
     {
+        link: "https://griffinstorey.com/",
+        title: "griffin storey's website",
+        blurb: "website created for the audio engineer griffin storey",
+        tags: ["website", "development"],
+        date: "10-12-2026"
+    },
+    {
         link: "https://store.mote.moe/l/akh",
         title: "akh",
         blurb: 'akh is a violent package of 4 custom distortion algorithms engineered to wreak unbridled destruction on a signal. the four algorithms include "root," an algorithm that interacts more with higher harmonics; "euler," a warm hyperbolic tangent style transfer function; "absolute," an abrasive, lossy algorithm that rips sounds to shreds; and "sqrtube," an algorithm inspired by the asymmetry of tube distortions.',
