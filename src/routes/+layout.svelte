@@ -12,6 +12,9 @@
 
     let container: HTMLButtonElement[] = [];
 
+	let innerWidth = $state(0);
+	let innerHeight = $state(0);
+
 	let navItems = [
 		{url:"/",text:"home",type:"internal"},
 		{url:"/about",text:"about",type:"internal"},
@@ -38,7 +41,6 @@
         switch (window.location.pathname){
             case '/':
                 moveRectangle(0, navItems[0]);
-				
                 break;
             case '/about':
                 moveRectangle(1, navItems[1]);
@@ -58,11 +60,19 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
+<svelte:window bind:innerHeight bind:innerWidth></svelte:window>
+
 <nav>
 	<div class="selected-page" style="z-index:-1; position:fixed; width:{selectedSize.current}px; left:{selectedPosition.current}px;"></div>
+	{#if innerHeight < innerWidth}
 	{#each navItems as navItem, i}
 		<button {@attach (node) => {assignElementsToArray(node, i)}} onclick={() => moveRectangle(i, navItem)}>{navItem.text}</button>
 	{/each}
+	{:else if innerHeight > innerWidth}
+	{#each navItems.splice(0,4) as navItem, i}
+		<button {@attach (node) => {assignElementsToArray(node, i)}} onclick={() => moveRectangle(i, navItem)}>{navItem.text}</button>
+	{/each}
+	{/if}
 </nav>
 
 <style>
@@ -147,6 +157,7 @@
 			bottom:auto;
 			top:0;
 			height:70px;
+			width:100%;
 		}
 		.selected-page{
 			height:70px;

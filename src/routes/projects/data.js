@@ -1,8 +1,15 @@
 export const projects = [
     {
+        link: "https://github.com/mikeoat/terrakh-pedal",
+        title: "terrakh pedal",
+        blurb: "a guitar pedal that makes use of wave terrain ring modulation and tanh distortion to offer a destructive hardware effect using the <a href='https://docs.daisy.audio/hardware/Seed/'>daisy seed</a>.",
+        tags: ["audio programming", "development", "hardware"],
+        date: "11-20-2026"
+    },
+    {
         link: "https://griffinstorey.com/",
         title: "griffin storey's website",
-        blurb: "website created for the audio engineer griffin storey",
+        blurb: "website created and maintained for the audio engineer griffin storey",
         tags: ["website", "development"],
         date: "10-12-2026"
     },
@@ -21,16 +28,16 @@ export const projects = [
         date: "10-01-2026"
     },
     {
-        link: "https://smilleyhasawebsite.com/",
-        title: "redo of smilley's website",
-        blurb: "website created for the artist smilley with sveltekit and love",
-        tags: ["website", "development"],
-        date: "01-30-2026"
+        link: "https://mikgm.bandcamp.com/album/aphantasia",
+        title: "aphantasia",
+        blurb: "aphantasia is a long-form improvised electronic piece composed of abstracted samples. this piece explores sound unbound to imagery in a musical context. this piece takes advantage of the resonant qualities of allpass filters to produce tones that tell a story without the perceptual constraints of the listener. aphantasia shapes data to challenge the nature of the mind, asking the listener what may be bound by perception.",
+        tags: ["music", "composition"],
+        date: "04-08-2026"
     },
     {
         link: "https://github.com/mikeoat/singing-sand",
         title: "Acoustic Simulation of Singing Sand",
-        blurb: "a novel synthesis method in which the singing sand dune phenomenon was simulated using the discrete element method (research article pending publishing). <a href='https://www.youtube.com/watch?v=6qA7mPoIyf8'>watch an explainer video (youtube)",
+        blurb: "a novel synthesis method in which the singing sand dune phenomenon was simulated using the discrete element method. <a href='https://www.youtube.com/watch?v=6qA7mPoIyf8'>watch an explainer video (youtube)",
         tags: ["audio programming", "software", "development"],
         date: "12-11-2025"
     },
@@ -79,7 +86,7 @@ export const projects = [
     {
         link: "https://github.com/mikgmcd/mikgmcd.github.io/tree/main",
         title: "smilley's website",
-        blurb: "website created for the artist smilley with html, css, and elbow grease",
+        blurb: "website created and maintained for the artist smilley",
         tags: ["website", "development"],
         date: "04-20-2023"
     },
